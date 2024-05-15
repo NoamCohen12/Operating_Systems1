@@ -1,0 +1,20 @@
+CC = gcc
+FLAG = -Wall -g
+CGOV = -fprofile-arcs -ftest-coverage
+
+.PHONY: all clean
+
+run: dikjkstra
+	for file in *.txt; do \
+		./dikjkstra <$$file || true; \
+	done
+	gcov q4.c
+
+dikjkstra: q4.o
+	$(CC) $(FLAG) $(CGOV) q4.o -o dikjkstra 
+
+q4.o: q4.c
+	$(CC) $(FLAG) $(CGOV) -c q4.c
+
+clean:
+	rm -f *.o *.gcov *.gcno *.gcda dikjkstra

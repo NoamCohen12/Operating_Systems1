@@ -1,0 +1,16 @@
+/mnt/wslg/dumps/
+gdb ./q1 core.q1.271482
+gdb ./q2 core.q2.298363
+gdb ./q3 core.q3.294073
+
+
+
+
+
+ cp /mnt/wslg/dumps/core.q2.298363 ./
+ cd ~/system_programming/Operating_Systems
+
+
+
+
+

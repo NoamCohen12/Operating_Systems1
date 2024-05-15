@@ -1,0 +1,4 @@
+vi q4.c.gcov   open and see how math covering in code
+
+
+gcov q4.c   run with gcov
