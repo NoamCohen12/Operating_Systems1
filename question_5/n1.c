@@ -1,7 +1,12 @@
-int best = 0, sum = 0;
-for (int k = 0; k < n; k++)
+#include <stdio.h>
+
+int max_sub_array(int *array, int n)
 {
-    sum = max(array[k], sum + array[k]);
-    best = max(best, sum);
+    int best = 0, sum = 0;
+    for (int k = 0; k < n; k++)
+    {
+        sum = (array[k] > sum + array[k]) ? array[k] : sum + array[k];
+        best = (best > sum) ? best : sum;
+    }
+    return best;
 }
-cout << best << "\n";

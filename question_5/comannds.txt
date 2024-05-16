@@ -1,0 +1,2 @@
+gprof n3  gmon.out > analysis.txt
+cat analysis.txt

@@ -1,11 +1,16 @@
-int best = 0;
-for (int a = 0; a < n; a++)
+
+int max_sub_array(int* array, int n)
 {
-    int sum = 0;
-    for (int b = a; b < n; b++)
+    int best = 0;
+    for (int a = 0; a < n; a++)
     {
-        sum += array[b];
-        best = max(best, sum);
+        int sum = 0;
+        for (int b = a; b < n; b++)
+        {
+            sum += array[b];
+            best = (best > sum) ? best : sum;
+
+        }
     }
+    return best;
 }
-cout << best << "\n";
