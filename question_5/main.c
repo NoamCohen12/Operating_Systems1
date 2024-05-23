@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "maxSubArr.h"
 
 void generateRandomNumber(int min, int max, int *arr, int size)
 {

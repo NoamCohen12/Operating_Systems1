@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include "maxSubArr.h"
 
 int max_sub_array(int *array, int n)
 {
