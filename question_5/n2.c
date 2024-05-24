@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "maxSubArr.h"
 
-int max_sub_array(int* array, int n)
+int max_sub_array(int* array, int n)//o(n^2)
 {
     int best = 0;
     for (int a = 0; a < n; a++)

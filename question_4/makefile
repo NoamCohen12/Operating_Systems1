@@ -4,17 +4,17 @@ CGOV = -fprofile-arcs -ftest-coverage
 
 .PHONY: all clean
 
-run: dikjkstra
+run: dijkstra
 	for file in *.txt; do \
-		./dikjkstra <$$file || true; \
+		./dijkstra <$$file || true; \
 	done
 	gcov q4.c
 
-dikjkstra: q4.o
-	$(CC) $(FLAG) $(CGOV) q4.o -o dikjkstra 
+dijkstra: q4.o
+	$(CC) $(FLAG) $(CGOV) q4.o -o dijkstra 
 
 q4.o: q4.c
 	$(CC) $(FLAG) $(CGOV) -c q4.c
 
 clean:
-	rm -f *.o *.gcov *.gcno *.gcda dikjkstra
+	rm -f *.o *.gcov *.gcno *.gcda dijkstra
