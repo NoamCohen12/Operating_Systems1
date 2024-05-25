@@ -27,3 +27,8 @@ clean:
 	make -C question_4 clean
 	make -C question_5 clean
 	make -C question_6 clean
+
+
+
+
+

@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     }
     double lamda = atof(argv[1]);
     int k = atoi(argv[2]);
-    long double p_x = (pow(lamda, k) / factorial(k)) * exp(-lamda);
+    long double p_x = (pow(lamda, k) / factorial(k)) * expl(-lamda);
     printf("poisson for lamda: %.2f , k: %d is: %.10Lf\n", lamda, k, p_x);
     return 0;
 }
